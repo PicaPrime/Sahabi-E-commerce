@@ -68,17 +68,35 @@
         </div>
     </footer>
 
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart (<span id="cart-count-header">0</span>)</h2>
+            <button class="close-cart" onclick="toggleCart()">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be injected here -->
+            <div class="empty-cart-message">Your cart is empty</div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">$0.00</span>
+            </div>
+            <a href="checkout.html" class="btn-checkout">Checkout</a>
+        </div>
+    </div>
+
     <script>
-        // Use a hardcoded price multiplier map if needed, or rely on logic
-        // 10ml: base price
-        // 20ml: 2x price
-        // 50ml: 5x price
-        // But the user said "price per ml" in JSON plan. Let's use that.
+        // State
+        let cart = JSON.parse(localStorage.getItem('sahabi_cart')) || [];
+        let products = [];
 
         async function loadProducts() {
             try {
                 const response = await fetch('perfumes.json');
-                const products = await response.json();
+                products = await response.json();
                 const grid = document.getElementById('product-grid');
 
                 products.forEach((product, index) => {
@@ -87,7 +105,7 @@
                     card.style.animationDelay = `${index * 0.1}s`;
 
                     // Default size
-                    const defaultSize = product.sizes[0]; // "10ml"
+                    const defaultSize = product.sizes[0];
                     const defaultPrice = (product.price_per_ml * parseInt(defaultSize)).toFixed(2);
 
                     card.innerHTML = `
@@ -108,7 +126,7 @@
                     }).join('')}
                             </div>
 
-                            <button class="btn-add" onclick="addToCart('${product.name}')">Add to Cart</button>
+                            <button class="btn-add" onclick="addToCart('${product.id}', this)">Add to Cart</button>
                         </div>
                     `;
                     grid.appendChild(card);
@@ -131,6 +149,7 @@
             container.querySelectorAll('.btn-size').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
+            // Find current active size for this card (to store in data attribute if needed, but we can just find active class)
             // Calculate price
             const ml = parseInt(size);
             const newPrice = (pricePerMl * ml).toFixed(2);
@@ -140,13 +159,144 @@
             priceEl.textContent = `$${newPrice}`;
         }
 
-        function addToCart(productName) {
-            // Simple visual feedback
-            alert(`Added ${productName} to cart!`);
+        function addToCart(productId, btn) {
+            const product = products.find(p => p.id === productId);
+            if (!product) {
+                console.error('Product not found:', productId);
+                return;
+            }
+
+            // Robustly find selected size using the button's context
+            const card = btn.closest('.product-card');
+            const activeSizeBtn = card.querySelector('.btn-size.active');
+
+            if (!activeSizeBtn) {
+                // Fallback (should not happen if defaults are set)
+                console.error('No size selected');
+                return;
+            }
+
+            const size = activeSizeBtn.innerText.trim();
+            const ml = parseInt(size);
+            const price = (product.price_per_ml * ml);
+
+            // Check if item already exists in cart (same ID AND same Size)
+            const existingItem = cart.find(item => item.id === productId && item.size === size);
+
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    id: productId,
+                    name: product.name,
+                    price: price, // Unit price for this size
+                    size: size,
+                    image: product.image,
+                    quantity: 1
+                });
+            }
+
+            saveCart();
+            updateCartUI();
+            toggleCart(true); // Open cart to show item
+        }
+
+        function removeFromCart(productId, size) {
+            cart = cart.filter(item => !(item.id === productId && item.size === size));
+            saveCart();
+            updateCartUI();
+        }
+
+        function updateQuantity(productId, size, change) {
+            const item = cart.find(item => item.id === productId && item.size === size);
+            if (item) {
+                item.quantity += change;
+                if (item.quantity <= 0) {
+                    removeFromCart(productId, size);
+                } else {
+                    saveCart();
+                    updateCartUI();
+                }
+            }
+        }
+
+        function saveCart() {
+            localStorage.setItem('sahabi_cart', JSON.stringify(cart));
+            updateCartCount();
+        }
+
+        function updateCartCount() {
+            const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+            document.querySelector('.btn-nav span').textContent = `Cart (${count})`;
+            document.getElementById('cart-count-header').textContent = count;
+        }
+
+        function updateCartUI() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            const totalEl = document.getElementById('cart-total-price');
+
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '<div class="empty-cart-message">Your cart is empty</div>';
+                totalEl.textContent = '$0.00';
+                return;
+            }
+
+            let total = 0;
+            cartItemsContainer.innerHTML = cart.map(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                return `
+                    <div class="cart-item">
+                        <img src="${item.image}" alt="${item.name}">
+                        <div class="cart-item-details">
+                            <h4>${item.name}</h4>
+                            <p>${item.size} - $${item.price.toFixed(2)}</p>
+                            <div class="quantity-controls">
+                                <button onclick="updateQuantity('${item.id}', '${item.size}', -1)">-</button>
+                                <span>${item.quantity}</span>
+                                <button onclick="updateQuantity('${item.id}', '${item.size}', 1)">+</button>
+                            </div>
+                        </div>
+                        <button class="remove-item" onclick="removeFromCart('${item.id}', '${item.size}')">&times;</button>
+                    </div>
+                `;
+            }).join('');
+
+            totalEl.textContent = `$${total.toFixed(2)}`;
+        }
+
+        function toggleCart(forceOpen = null) {
+            const sidebar = document.getElementById('cart-sidebar');
+            const overlay = document.getElementById('cart-overlay');
+
+            if (forceOpen === true) {
+                sidebar.classList.add('open');
+                overlay.classList.add('open');
+            } else if (forceOpen === false) {
+                sidebar.classList.remove('open');
+                overlay.classList.remove('open');
+            } else {
+                sidebar.classList.toggle('open');
+                overlay.classList.toggle('open');
+            }
         }
 
         // Initialize
-        document.addEventListener('DOMContentLoaded', loadProducts);
+        document.addEventListener('DOMContentLoaded', () => {
+            loadProducts();
+            updateCartCount();
+            updateCartUI();
+
+            // Add click listener to Nav Cart Button
+            const navCartBtn = document.querySelector('.btn-nav');
+            if (navCartBtn) {
+                navCartBtn.href = "#";
+                navCartBtn.onclick = (e) => {
+                    e.preventDefault();
+                    toggleCart();
+                }
+            }
+        });
     </script>
 </body>
 
