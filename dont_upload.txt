@@ -1,0 +1,108 @@
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Order Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="max-w-md mx-auto bg-white rounded-lg shadow-md p-6">
+        <h2 class="text-2xl font-bold mb-6">Place Your Order</h2>
+        
+        <form id="orderForm" class="space-y-4">
+            <div>
+                <label class="block text-sm font-medium mb-1">Name</label>
+                <input type="text" id="customerName" required
+                    class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+            </div>
+            
+            <div>
+                <label class="block text-sm font-medium mb-1">Email</label>
+                <input type="email" id="email" required
+                    class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+            </div>
+            
+            <div>
+                <label class="block text-sm font-medium mb-1">Product</label>
+                <input type="text" id="product" required
+                    class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+            </div>
+            
+            <div>
+                <label class="block text-sm font-medium mb-1">Quantity</label>
+                <input type="number" id="quantity" required min="1"
+                    class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+            </div>
+            
+            <div>
+                <label class="block text-sm font-medium mb-1">Total ($)</label>
+                <input type="number" id="total" required step="0.01"
+                    class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+            </div>
+            
+            <button type="submit" 
+                class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
+                Submit Order
+            </button>
+        </form>
+        
+        <div id="message" class="mt-4 p-3 rounded hidden"></div>
+    </div>
+
+    <script>
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyITxeiSV2jJFfi2TbI6rU6K10F0BuuQXCkdpBMY0zgNIb2tgo97G3eKgisLZWQbsKT/exec'; // Replace with your deployed URL
+        
+        document.getElementById('orderForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const submitButton = e.target.querySelector('button[type="submit"]');
+            const messageDiv = document.getElementById('message');
+            
+            // Disable button and show loading
+            submitButton.disabled = true;
+            submitButton.textContent = 'Submitting...';
+            messageDiv.classList.add('hidden');
+            
+            // Collect form data
+            const orderData = {
+                customerName: document.getElementById('customerName').value,
+                email: document.getElementById('email').value,
+                product: document.getElementById('product').value,
+                quantity: document.getElementById('quantity').value,
+                total: document.getElementById('total').value
+            };
+            
+            try {
+                const response = await fetch(SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors', // Important for Apps Script
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(orderData)
+                });
+                
+                // With no-cors, we can't read response, so assume success
+                messageDiv.textContent = 'Order submitted successfully!';
+                messageDiv.className = 'mt-4 p-3 rounded bg-green-100 text-green-700';
+                messageDiv.classList.remove('hidden');
+                
+                // Reset form
+                e.target.reset();
+                
+            } catch (error) {
+                messageDiv.textContent = 'Error submitting order. Please try again.';
+                messageDiv.className = 'mt-4 p-3 rounded bg-red-100 text-red-700';
+                messageDiv.classList.remove('hidden');
+            } finally {
+                submitButton.disabled = false;
+                submitButton.textContent = 'Submit Order';
+            }
+        });
+    </script>
+</body>
+</html> -->

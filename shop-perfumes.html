@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Perfumes | Sahabi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            padding-top: 120px;
+            padding-bottom: 3rem;
+            text-align: center;
+            background: radial-gradient(circle at center, #1f1f1f, var(--bg-color) 70%);
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .products-section {
+            padding-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">Sahabi</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop-perfumes.html" style="color: var(--accent-gold);">Perfumes</a></li>
+            <li><a href="#oils">Oils</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#" class="btn-nav">
+            <span>Cart (0)</span>
+            <div class="shine"></div>
+        </a>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header">
+        <h1 class="fade-in">Fine <span class="gold-text">Perfumes</span></h1>
+        <p class="fade-in delay-1">Choose your signature scent size</p>
+    </header>
+
+    <!-- Product Collection -->
+    <section id="shop-perfumes" class="products-section">
+        <div class="product-grid" id="product-grid">
+            <!-- Products will be injected here -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Sahabi</div>
+            <p>&copy; 2026 Sahabi Perfumes. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Use a hardcoded price multiplier map if needed, or rely on logic
+        // 10ml: base price
+        // 20ml: 2x price
+        // 50ml: 5x price
+        // But the user said "price per ml" in JSON plan. Let's use that.
+
+        async function loadProducts() {
+            try {
+                const response = await fetch('perfumes.json');
+                const products = await response.json();
+                const grid = document.getElementById('product-grid');
+
+                products.forEach((product, index) => {
+                    const card = document.createElement('div');
+                    card.className = 'product-card fade-in';
+                    card.style.animationDelay = `${index * 0.1}s`;
+
+                    // Default size
+                    const defaultSize = product.sizes[0]; // "10ml"
+                    const defaultPrice = (product.price_per_ml * parseInt(defaultSize)).toFixed(2);
+
+                    card.innerHTML = `
+                        <div class="card-image">
+                            <img src="${product.image}" alt="${product.name}">
+                        </div>
+                        <div class="card-info">
+                            <h3>${product.name}</h3>
+                            <p class="price" id="price-${product.id}">$${defaultPrice}</p>
+                            
+                            <div class="size-selector">
+                                ${product.sizes.map(size => {
+                        const isActive = size === defaultSize ? 'active' : '';
+                        return `<button class="btn-size ${isActive}" 
+                                            onclick="updatePrice('${product.id}', '${size}', ${product.price_per_ml}, this)">
+                                            ${size}
+                                            </button>`;
+                    }).join('')}
+                            </div>
+
+                            <button class="btn-add" onclick="addToCart('${product.name}')">Add to Cart</button>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                });
+
+                // Trigger animations
+                setTimeout(() => {
+                    document.querySelectorAll('.fade-in').forEach(el => el.classList.add('visible'));
+                }, 100);
+
+            } catch (error) {
+                console.error('Error loading products:', error);
+                document.getElementById('product-grid').innerHTML = '<p>Unable to load products. Please try again later.</p>';
+            }
+        }
+
+        function updatePrice(productId, size, pricePerMl, btn) {
+            // Update UI
+            const container = btn.parentElement;
+            container.querySelectorAll('.btn-size').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Calculate price
+            const ml = parseInt(size);
+            const newPrice = (pricePerMl * ml).toFixed(2);
+
+            // Update Price Display
+            const priceEl = document.getElementById(`price-${productId}`);
+            priceEl.textContent = `$${newPrice}`;
+        }
+
+        function addToCart(productName) {
+            // Simple visual feedback
+            alert(`Added ${productName} to cart!`);
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', loadProducts);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "p1",
+    "name": "Royal Oud",
+    "type": "perfume",
+    "description": "A majestic blend of agarwood and spices, suitable for evening wear.",
+    "sizes": ["10ml", "20ml", "50ml"],
+    "price_per_ml": 2.5,
+    "image": "https://placehold.co/400x400?text=Royal+Oud"
+  },
+  {
+    "id": "p2",
+    "name": "Golden Musk",
+    "type": "perfume",
+    "description": "A lighter, sprayable version of our signature Golden Musk.",
+    "sizes": ["10ml", "20ml", "50ml"],
+    "price_per_ml": 2.0,
+    "image": "https://placehold.co/400x400?text=Golden+Musk"
+  },
+  {
+    "id": "p3",
+    "name": "Jasmine Breeze",
+    "type": "perfume",
+    "description": "Light and airy floral notes capturing the essence of spring.",
+    "sizes": ["10ml", "20ml", "50ml"],
+    "price_per_ml": 1.8,
+    "image": "https://placehold.co/400x400?text=Jasmine+Breeze"
+  },
+  {
+    "id": "p4",
+    "name": "Sandalwood Essence",
+    "type": "perfume",
+    "description": "A smooth sandalwood fragrance with a woody, creamy finish.",
+    "sizes": ["10ml", "20ml", "50ml"],
+    "price_per_ml": 2.5,
+    "image": "https://placehold.co/400x400?text=Sandalwood+Essence"
+  },
+  {
+    "id": "p5",
+    "name": "Ocean Mist",
+    "type": "perfume",
+    "description": "Fresh aquatic scent with hints of citrus and sea salt.",
+    "sizes": ["10ml", "20ml", "50ml"],
+    "price_per_ml": 2.0,
+    "image": "https://placehold.co/400x400?text=Ocean+Mist"
+  },
+  {
+    "id": "p6",
+    "name": "Rose Elixir",
+    "type": "perfume",
+    "description": "A romantic and elegant rose fragrance for any occasion.",
+    "sizes": ["10ml", "20ml", "50ml"],
+    "price_per_ml": 2.2,
+    "image": "https://placehold.co/400x400?text=Rose+Elixir"
+  }
+]

@@ -1,21 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sahabi E-commerce</title>
+    <title>Sahabi | Essence of Nobility</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">Sahabi</div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#collection">Collection</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#collection" class="btn-nav">
+            <span>Shop Products</span>
+            <div class="shine"></div>
+        </a>
+    </nav>
+
+    <!-- Hero Section -->
+    <!-- Hero Section -->
+    <section id="hero" class="hero-split">
+        <div class="split-panel left">
+            <div class="panel-bg" style="background-image: url('assets/hero_perfume.png');"></div>
+            <div class="panel-content">
+                <h2 class="fade-in">Fine <span class="gold-text">Perfumes</span></h2>
+                <p class="fade-in delay-1">Exquisite sprays for the elegant aura.</p>
+                <a href="shop-perfumes.html" class="btn-hero fade-in delay-2">
+                    Shop Perfumes
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </div>
+            <div class="panel-overlay"></div>
+        </div>
+        <div class="split-panel right">
+            <div class="panel-bg" style="background-image: url('assets/hero_perfume_oil.png');"></div>
+            <div class="panel-content">
+                <h2 class="fade-in">Pure <span class="gold-text">Oils</span></h2>
+                <p class="fade-in delay-1">Concentrated essence for the connoisseur.</p>
+                <a href="#oils" class="btn-hero fade-in delay-2">
+                    Shop Oils
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </div>
+            <div class="panel-overlay"></div>
+        </div>
+    </section>
+
+    <!-- Product Collection -->
+    <section id="collection" class="products-section">
+        <div class="section-header">
+            <h2>Signature Collection</h2>
+            <p>Curated scents for the discerning soul.</p>
+        </div>
+
+        <div class="product-grid">
+            <!-- Product Card 1 -->
+            <div class="product-card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1594035910387-fea4779426e9?q=80&w=1000&auto=format&fit=crop"
+                        alt="Royal Oud">
+                </div>
+                <div class="card-info">
+                    <h3>Royal Oud</h3>
+                    <p class="price">$120.00</p>
+                    <button class="btn-add">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="product-card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=1000&auto=format&fit=crop"
+                        alt="Midnight Musk">
+                </div>
+                <div class="card-info">
+                    <h3>Midnight Musk</h3>
+                    <p class="price">$95.00</p>
+                    <button class="btn-add">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="product-card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=1000&auto=format&fit=crop"
+                        alt="Amber Gold">
+                </div>
+                <div class="card-info">
+                    <h3>Amber Gold</h3>
+                    <p class="price">$150.00</p>
+                    <button class="btn-add">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Sahabi</div>
+            <p>&copy; 2026 Sahabi Perfumes. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple intersection observer for fade-in animations on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in, .product-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 </body>
+
 </html>

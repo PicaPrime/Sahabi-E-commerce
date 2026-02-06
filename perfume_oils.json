@@ -1,0 +1,56 @@
+[
+  {
+    "id": "o1",
+    "name": "Royal Oud",
+    "type": "perfume oil",
+    "description": "Concentrated agarwood oil, rich and long-lasting.",
+    "sizes": ["3ml", "5ml", "10ml"],
+    "price_per_ml": 5.0,
+    "image": "https://placehold.co/400x400?text=Royal+Oud+Oil"
+  },
+  {
+    "id": "o2",
+    "name": "Golden Musk",
+    "type": "perfume oil",
+    "description": "Pure, concentrated musk oil with a warm, lasting finish.",
+    "sizes": ["3ml", "5ml", "10ml"],
+    "price_per_ml": 4.0,
+    "image": "https://placehold.co/400x400?text=Golden+Musk+Oil"
+  },
+  {
+    "id": "o3",
+    "name": "Jasmine Breeze",
+    "type": "perfume oil",
+    "description": "Intense jasmine essence oil, capturing the heart of the flower.",
+    "sizes": ["3ml", "5ml", "10ml"],
+    "price_per_ml": 3.6,
+    "image": "https://placehold.co/400x400?text=Jasmine+Breeze+Oil"
+  },
+  {
+    "id": "o4",
+    "name": "Sandalwood Essence",
+    "type": "perfume oil",
+    "description": "Earthy and grounding pure sandalwood oil.",
+    "sizes": ["3ml", "5ml", "10ml"],
+    "price_per_ml": 5.0,
+    "image": "https://placehold.co/400x400?text=Sandalwood+Essence+Oil"
+  },
+  {
+    "id": "o5",
+    "name": "Ocean Mist",
+    "type": "perfume oil",
+    "description": "Concentrated marine essence, refreshing and crisp.",
+    "sizes": ["3ml", "5ml", "10ml"],
+    "price_per_ml": 4.0,
+    "image": "https://placehold.co/400x400?text=Ocean+Mist+Oil"
+  },
+  {
+    "id": "o6",
+    "name": "Rose Elixir",
+    "type": "perfume oil",
+    "description": "Intense and romantic concentrated rose oil.",
+    "sizes": ["3ml", "5ml", "10ml"],
+    "price_per_ml": 4.5,
+    "image": "https://placehold.co/400x400?text=Rose+Elixir+Oil"
+  }
+]
