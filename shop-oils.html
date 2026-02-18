@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop Perfumes | Sahabi</title>
+    <title>Shop Oils | Sahabi</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -37,8 +37,8 @@
         <a href="index.html" class="logo">Sahabi</a>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="shop-perfumes.html" style="color: var(--accent-gold);">Perfumes</a></li>
-            <li><a href="shop-oils.html">Oils</a></li>
+            <li><a href="shop-perfumes.html">Perfumes</a></li>
+            <li><a href="shop-oils.html" style="color: var(--accent-gold);">Oils</a></li>
             <li><a href="#offers">Offers</a></li>
         </ul>
         <a href="#" class="btn-nav">
@@ -49,12 +49,12 @@
 
     <!-- Header -->
     <header class="page-header">
-        <h1 class="fade-in">Fine <span class="gold-text">Perfumes</span></h1>
-        <p class="fade-in delay-1">Choose your signature scent size</p>
+        <h1 class="fade-in">Fine <span class="gold-text">Oils</span></h1>
+        <p class="fade-in delay-1">Concentrated essence for the connoisseur</p>
     </header>
 
     <!-- Product Collection -->
-    <section id="shop-perfumes" class="products-section">
+    <section id="shop-oils" class="products-section">
         <div class="product-grid" id="product-grid">
             <!-- Products will be injected here -->
         </div>
@@ -95,7 +95,7 @@
 
         async function loadProducts() {
             try {
-                const response = await fetch('perfumes.json');
+                const response = await fetch('perfume_oils.json');
                 products = await response.json();
                 const grid = document.getElementById('product-grid');
 
@@ -119,9 +119,6 @@
                             <div class="size-selector">
                                 ${product.sizes.map(size => {
                         const isActive = size === defaultSize ? 'active' : '';
-                        // Pass price directly to avoid lookups if possible, or just ID/Size
-                        // We will look up price from product object in updatePrice function 
-                        // to keep HTML clean (or pass it if we want)
                         return `<button class="btn-size ${isActive}" 
                                             onclick="updatePrice('${product.id}', '${size}', this)">
                                             ${size}

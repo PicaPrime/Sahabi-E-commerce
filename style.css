@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 :root {
   --bg-color: #0d0d0d;
   --surface-color: #1a1a1a;
@@ -342,6 +344,7 @@ a {
   justify-content: center;
   gap: 10px;
   margin-bottom: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .btn-size {
@@ -431,25 +434,26 @@ footer {
     display: none;
   }
 
-  .hero {
-    flex-direction: column-reverse;
-    text-align: center;
-    padding-top: 100px;
+  .hero-split {
+    padding-top: 95px;
+    flex-direction: column;
     height: auto;
+    min-height: 100vh;
   }
 
-  .hero-content,
-  .hero-image {
-    max-width: 100%;
+  .split-panel {
+    width: 100%;
+    height: 50vh;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
-  .hero h1 {
-    font-size: 3rem;
+  .split-panel:last-child {
+    border-bottom: none;
   }
 
-  .hero-image img {
-    max-height: 400px;
-    margin-bottom: 2rem;
+  .panel-content h2 {
+    font-size: 2.5rem;
   }
 }
 

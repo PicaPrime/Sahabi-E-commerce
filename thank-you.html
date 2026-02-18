@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed | Sahabi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            padding-top: 150px;
+            padding-bottom: 5rem;
+            text-align: center;
+            background: radial-gradient(circle at center, #1f1f1f, var(--bg-color) 70%);
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-gold);
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            line-height: 1.6;
+        }
+
+        .btn-home {
+            display: inline-block;
+            background: transparent;
+            color: var(--accent-gold);
+            padding: 1rem 3rem;
+            border: 1px solid var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-decoration: none;
+            margin-top: 2rem;
+        }
+
+        .btn-home:hover {
+            background: var(--accent-gold);
+            color: var(--bg-color);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">Sahabi</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop-perfumes.html">Perfumes</a></li>
+            <li><a href="shop-oils.html">Oils</a></li>
+            <li><a href="#offers">Offers</a></li>
+        </ul>
+        <a href="index.html" class="btn-nav">
+            <span>Home</span>
+        </a>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header">
+        <h1 class="fade-in">Thank You</h1>
+        <p class="fade-in delay-1">Your order has used successfully placed. We will contact you ASAP via phone to
+            confirm delivery details.</p>
+
+        <a href="index.html" class="btn-home fade-in delay-2">Back to Home</a>
+    </header>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Sahabi</div>
+            <p>&copy; 2026 Sahabi Perfumes. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Animations
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                document.querySelectorAll('.fade-in').forEach(el => el.classList.add('visible'));
+            }, 100);
+        });
+    </script>
+</body>
+
+</html>

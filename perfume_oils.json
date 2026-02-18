@@ -1,56 +1,301 @@
 [
   {
     "id": "o1",
-    "name": "Royal Oud",
+    "name": "Dunhill Desire",
     "type": "perfume oil",
-    "description": "Concentrated agarwood oil, rich and long-lasting.",
-    "sizes": ["3ml", "5ml", "10ml"],
-    "price_per_ml": 5.0,
-    "image": "https://placehold.co/400x400?text=Royal+Oud+Oil"
+    "description": "Concentrated perfume oil.",
+    "sizes": ["1ml", "3ml", "6ml"],
+    "prices": {
+      "1ml": 50,
+      "3ml": 150,
+      "6ml": 250
+    },
+    "image": "https://placehold.co/400x400?text=Dunhill+Desire+Oil"
   },
   {
     "id": "o2",
-    "name": "Golden Musk",
+    "name": "Cool Water",
     "type": "perfume oil",
-    "description": "Pure, concentrated musk oil with a warm, lasting finish.",
-    "sizes": ["3ml", "5ml", "10ml"],
-    "price_per_ml": 4.0,
-    "image": "https://placehold.co/400x400?text=Golden+Musk+Oil"
+    "description": "Concentrated perfume oil.",
+    "sizes": ["1ml", "3ml", "6ml"],
+    "prices": {
+      "1ml": 50,
+      "3ml": 150,
+      "6ml": 250
+    },
+    "image": "https://placehold.co/400x400?text=Cool+Water+Oil"
   },
   {
     "id": "o3",
-    "name": "Jasmine Breeze",
+    "name": "DNG Light Blue",
     "type": "perfume oil",
-    "description": "Intense jasmine essence oil, capturing the heart of the flower.",
-    "sizes": ["3ml", "5ml", "10ml"],
-    "price_per_ml": 3.6,
-    "image": "https://placehold.co/400x400?text=Jasmine+Breeze+Oil"
+    "description": "Concentrated perfume oil.",
+    "sizes": ["1ml", "3ml", "6ml"],
+    "prices": {
+      "1ml": 50,
+      "3ml": 150,
+      "6ml": 250
+    },
+    "image": "https://placehold.co/400x400?text=DNG+Light+Blue+Oil"
   },
   {
     "id": "o4",
-    "name": "Sandalwood Essence",
+    "name": "Versace Eros",
     "type": "perfume oil",
-    "description": "Earthy and grounding pure sandalwood oil.",
-    "sizes": ["3ml", "5ml", "10ml"],
-    "price_per_ml": 5.0,
-    "image": "https://placehold.co/400x400?text=Sandalwood+Essence+Oil"
+    "description": "Concentrated perfume oil.",
+    "sizes": ["1ml", "3ml", "6ml"],
+    "prices": {
+      "1ml": 50,
+      "3ml": 150,
+      "6ml": 250
+    },
+    "image": "https://placehold.co/400x400?text=Versace+Eros+Oil"
   },
   {
     "id": "o5",
-    "name": "Ocean Mist",
+    "name": "Dior Sauvage",
     "type": "perfume oil",
-    "description": "Concentrated marine essence, refreshing and crisp.",
-    "sizes": ["3ml", "5ml", "10ml"],
-    "price_per_ml": 4.0,
-    "image": "https://placehold.co/400x400?text=Ocean+Mist+Oil"
+    "description": "Concentrated perfume oil.",
+    "sizes": ["1ml", "3ml", "6ml"],
+    "prices": {
+      "1ml": 60,
+      "3ml": 200,
+      "6ml": 350
+    },
+    "image": "https://placehold.co/400x400?text=Dior+Sauvage+Oil"
   },
   {
     "id": "o6",
-    "name": "Rose Elixir",
+    "name": "Good Girl",
     "type": "perfume oil",
-    "description": "Intense and romantic concentrated rose oil.",
-    "sizes": ["3ml", "5ml", "10ml"],
-    "price_per_ml": 4.5,
-    "image": "https://placehold.co/400x400?text=Rose+Elixir+Oil"
+    "description": "Concentrated perfume oil.",
+    "sizes": ["1ml", "3ml", "6ml"],
+    "prices": {
+      "1ml": 60,
+      "3ml": 200,
+      "6ml": 350
+    },
+    "image": "https://placehold.co/400x400?text=Good+Girl+Oil"
+  },
+  {
+    "id": "o7",
+    "name": "Safari",
+    "type": "perfume oil",
+    "description": "Concentrated perfume oil.",
+    "sizes": ["1ml", "3ml", "6ml"],
+    "prices": {
+      "1ml": 60,
+      "3ml": 200,
+      "6ml": 350
+    },
+    "image": "https://placehold.co/400x400?text=Safari+Oil"
+  },
+  {
+    "id": "o8",
+    "name": "Blue De Chanel",
+    "type": "perfume oil",
+    "description": "Concentrated perfume oil.",
+    "sizes": ["1ml", "3ml", "6ml"],
+    "prices": {
+      "1ml": 60,
+      "3ml": 220,
+      "6ml": 390
+    },
+    "image": "https://placehold.co/400x400?text=Blue+De+Chanel+Oil"
+  },
+  {
+    "id": "o9",
+    "name": "Vampire Blood",
+    "type": "perfume oil",
+    "description": "Concentrated perfume oil.",
+    "sizes": ["1ml", "3ml", "6ml"],
+    "prices": {
+      "1ml": 60,
+      "3ml": 250,
+      "6ml": 450
+    },
+    "image": "https://placehold.co/400x400?text=Vampire+Blood+Oil"
+  },
+  {
+    "id": "o10",
+    "name": "Lemon",
+    "type": "perfume oil",
+    "description": "Concentrated perfume oil.",
+    "sizes": ["1ml", "3ml", "6ml"],
+    "prices": {
+      "1ml": 30,
+      "3ml": 120,
+      "6ml": 200
+    },
+    "image": "https://placehold.co/400x400?text=Lemon+Oil"
+  },
+  {
+    "id": "o11",
+    "name": "Rojonigondha",
+    "type": "perfume oil",
+    "description": "Concentrated perfume oil.",
+    "sizes": ["1ml", "3ml", "6ml"],
+    "prices": {
+      "1ml": 30,
+      "3ml": 120,
+      "6ml": 200
+    },
+    "image": "https://placehold.co/400x400?text=Rojonigondha+Oil"
+  },
+  {
+    "id": "o12",
+    "name": "Signature",
+    "type": "perfume oil",
+    "description": "Concentrated perfume oil.",
+    "sizes": ["1ml", "3ml", "6ml"],
+    "prices": {
+      "1ml": 50,
+      "3ml": 150,
+      "6ml": 250
+    },
+    "image": "https://placehold.co/400x400?text=Signature+Oil"
+  },
+  {
+    "id": "o13",
+    "name": "Scandal",
+    "type": "perfume oil",
+    "description": "Concentrated perfume oil.",
+    "sizes": ["1ml", "3ml", "6ml"],
+    "prices": {
+      "1ml": 50,
+      "3ml": 150,
+      "6ml": 250
+    },
+    "image": "https://placehold.co/400x400?text=Scandal+Oil"
+  },
+  {
+    "id": "o14",
+    "name": "Creed Aventus",
+    "type": "perfume oil",
+    "description": "Concentrated perfume oil.",
+    "sizes": ["1ml", "3ml", "6ml"],
+    "prices": {
+      "1ml": 60,
+      "3ml": 200,
+      "6ml": 350
+    },
+    "image": "https://placehold.co/400x400?text=Creed+Aventus+Oil"
+  },
+  {
+    "id": "o15",
+    "name": "Paris Hilton",
+    "type": "perfume oil",
+    "description": "Concentrated perfume oil.",
+    "sizes": ["1ml", "3ml", "6ml"],
+    "prices": {
+      "1ml": 60,
+      "3ml": 200,
+      "6ml": 350
+    },
+    "image": "https://placehold.co/400x400?text=Paris+Hilton+Oil"
+  },
+  {
+    "id": "o16",
+    "name": "Hawas Ice",
+    "type": "perfume oil",
+    "description": "Concentrated perfume oil.",
+    "sizes": ["1ml", "3ml", "6ml"],
+    "prices": {
+      "1ml": 60,
+      "3ml": 250,
+      "6ml": 450
+    },
+    "image": "https://placehold.co/400x400?text=Hawas+Ice+Oil"
+  },
+  {
+    "id": "o17",
+    "name": "Hawas Fire",
+    "type": "perfume oil",
+    "description": "Concentrated perfume oil.",
+    "sizes": ["1ml", "3ml", "6ml"],
+    "prices": {
+      "1ml": 60,
+      "3ml": 250,
+      "6ml": 450
+    },
+    "image": "https://placehold.co/400x400?text=Hawas+Fire+Oil"
+  },
+  {
+    "id": "o18",
+    "name": "Spice Bomb",
+    "type": "perfume oil",
+    "description": "Concentrated perfume oil.",
+    "sizes": ["1ml", "3ml", "6ml"],
+    "prices": {
+      "1ml": 60,
+      "3ml": 250,
+      "6ml": 450
+    },
+    "image": "https://placehold.co/400x400?text=Spice+Bomb+Oil"
+  },
+  {
+    "id": "o19",
+    "name": "Acqua Di Gio",
+    "type": "perfume oil",
+    "description": "Concentrated perfume oil.",
+    "sizes": ["1ml", "3ml", "6ml"],
+    "prices": {
+      "1ml": 70,
+      "3ml": 290,
+      "6ml": 500
+    },
+    "image": "https://placehold.co/400x400?text=Acqua+Di+Gio+Oil"
+  },
+  {
+    "id": "o20",
+    "name": "Hawas Cobra",
+    "type": "perfume oil",
+    "description": "Concentrated perfume oil.",
+    "sizes": ["1ml", "3ml", "6ml"],
+    "prices": {
+      "1ml": 60,
+      "3ml": 250,
+      "6ml": 450
+    },
+    "image": "https://placehold.co/400x400?text=Hawas+Cobra+Oil"
+  },
+  {
+    "id": "o21",
+    "name": "Lavender Oud",
+    "type": "perfume oil",
+    "description": "Concentrated perfume oil.",
+    "sizes": ["1ml", "3ml", "6ml"],
+    "prices": {
+      "1ml": 60,
+      "3ml": 250,
+      "6ml": 450
+    },
+    "image": "https://placehold.co/400x400?text=Lavender+Oud+Oil"
+  },
+  {
+    "id": "o22",
+    "name": "Balmain Paris",
+    "type": "perfume oil",
+    "description": "Concentrated perfume oil.",
+    "sizes": ["1ml", "3ml", "6ml"],
+    "prices": {
+      "1ml": 60,
+      "3ml": 250,
+      "6ml": 450
+    },
+    "image": "https://placehold.co/400x400?text=Balmain+Paris+Oil"
+  },
+  {
+    "id": "o23",
+    "name": "Suhrah",
+    "type": "perfume oil",
+    "description": "Concentrated perfume oil.",
+    "sizes": ["1ml", "3ml", "6ml"],
+    "prices": {
+      "1ml": 60,
+      "3ml": 250,
+      "6ml": 450
+    },
+    "image": "https://placehold.co/400x400?text=Suhrah+Oil"
   }
 ]
