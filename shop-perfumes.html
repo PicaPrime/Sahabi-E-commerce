@@ -34,7 +34,7 @@
 
     <!-- Navigation -->
     <nav class="navbar">
-        <a href="index.html" class="logo">Sahabi</a>
+        <a href="index.html" class="logo"><img src="assets/logo.PNG" alt="Sahabi" style="height: 50px;"></a>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="shop-perfumes.html" style="color: var(--accent-gold);">Perfumes</a></li>
@@ -63,7 +63,7 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div class="footer-logo">Sahabi</div>
+            <div class="footer-logo"><img src="assets/footer-logo.PNG" alt="Sahabi" style="height: 100px;"></div>
             <p>&copy; 2026 Sahabi Perfumes. All rights reserved.</p>
         </div>
     </footer>
@@ -97,6 +97,14 @@
             try {
                 const response = await fetch('perfumes.json');
                 products = await response.json();
+
+                // Sort product sizes in descending order
+                products.forEach(product => {
+                    if (product.sizes) {
+                        product.sizes.sort((a, b) => parseInt(b) - parseInt(a));
+                    }
+                });
+
                 const grid = document.getElementById('product-grid');
 
                 products.forEach((product, index) => {
@@ -104,13 +112,14 @@
                     card.className = 'product-card fade-in';
                     card.style.animationDelay = `${index * 0.1}s`;
 
-                    // Default size
+                    // Default size and image
                     const defaultSize = product.sizes[0];
                     const defaultPrice = product.prices[defaultSize].toFixed(2);
+                    const defaultImage = product.images ? product.images[defaultSize] : product.image;
 
                     card.innerHTML = `
                         <div class="card-image">
-                            <img src="${product.image}" alt="${product.name}">
+                            <img id="img-${product.id}" src="${defaultImage}" alt="${product.name}">
                         </div>
                         <div class="card-info">
                             <h3>${product.name}</h3>
@@ -156,12 +165,19 @@
             const product = products.find(p => p.id === productId);
             if (!product) return;
 
-            // Get Price
+            // Get Price & Image
             const newPrice = product.prices[size].toFixed(2);
+            const newImage = product.images ? product.images[size] : product.image;
 
             // Update Price Display
             const priceEl = document.getElementById(`price-${productId}`);
             priceEl.textContent = `৳${newPrice}`;
+
+            // Update Image Display
+            const imgEl = document.getElementById(`img-${productId}`);
+            if (imgEl && newImage) {
+                imgEl.src = newImage;
+            }
         }
 
         function addToCart(productId, btn) {

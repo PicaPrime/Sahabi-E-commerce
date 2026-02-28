@@ -18,7 +18,7 @@
 
     <!-- Navigation -->
     <nav class="navbar">
-        <a href="index.html" class="logo">Sahabi</a>
+        <a href="index.html" class="logo"><img src="assets/logo.PNG" alt="Sahabi" style="height: 50px;"></a>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="shop-perfumes.html">Perfumes</a></li>
@@ -61,9 +61,14 @@
                 <h2 class="section-title" style="margin-top: 2rem;">Payment Method</h2>
                 <div class="payment-methods">
                     <label class="payment-option">
-                        <input type="radio" name="payment" checked>
+                        <input type="radio" name="payment" value="60" checked onchange="updateShipping()">
                         <span class="radio-custom"></span>
-                        Cash on Delivery
+                        Cash on Delivery ( 60 inside Dhaka)
+                    </label>
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="120" onchange="updateShipping()">
+                        <span class="radio-custom"></span>
+                        Cash on Delivery ( 120 outside Dhaka)
                     </label>
                 </div>
 
@@ -85,7 +90,7 @@
                 </div>
                 <div class="summary-row">
                     <span>Shipping</span>
-                    <span>Free</span>
+                    <span id="shipping-price">৳0.00</span>
                 </div>
                 <div class="summary-row total">
                     <span>Total</span>
@@ -99,7 +104,7 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div class="footer-logo">Sahabi</div>
+            <div class="footer-logo"><img src="assets/footer-logo.PNG" alt="Sahabi" style="height: 100px;"></div>
             <p>&copy; 2026 Sahabi Perfumes. All rights reserved.</p>
         </div>
     </footer>
@@ -142,7 +147,31 @@
             }).join('');
 
             subtotalEl.textContent = `৳${total.toFixed(2)}`;
-            totalEl.textContent = `৳${total.toFixed(2)}`;
+
+            // Set subtotal to be used by updateShipping
+            subtotalEl.dataset.value = total;
+
+            // Initialize shipping right away based on checked radio
+            updateShipping();
+        }
+
+        function updateShipping() {
+            if (cart.length === 0) return;
+
+            const subtotalEl = document.getElementById('subtotal-price');
+            const shippingEl = document.getElementById('shipping-price');
+            const totalEl = document.getElementById('total-price');
+
+            // Get selected shipping cost
+            const selectedShippingRadio = document.querySelector('input[name="payment"]:checked');
+            const shippingCost = selectedShippingRadio ? parseFloat(selectedShippingRadio.value) : 0;
+
+            const subtotal = parseFloat(subtotalEl.dataset.value) || 0;
+            const newTotal = subtotal + shippingCost;
+
+            // Update UI
+            shippingEl.textContent = `৳${shippingCost.toFixed(2)}`;
+            totalEl.textContent = `৳${newTotal.toFixed(2)}`;
         }
 
         async function handleCheckout(e) {
@@ -161,7 +190,7 @@
                 email: document.querySelector('input[type="email"]').value,
                 phone: document.querySelector('input[type="tel"]').value,
                 address: document.querySelector('textarea').value,
-                payment_method: 'Cash on Delivery',
+                payment_method: document.querySelector('input[name="payment"]:checked').parentElement.textContent.trim(),
                 cart_items: cart.map(item => `${item.name} (${item.size}) x${item.quantity}`).join(', '),
                 total_price: document.getElementById('total-price').textContent
             };

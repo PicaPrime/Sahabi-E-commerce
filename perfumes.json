@@ -4,344 +4,505 @@
     "name": "Dunhill Desire",
     "type": "perfume",
     "description": "Premium perfume spray.",
-    "sizes": ["5ml", "10ml", "30ml", "50ml", "100ml"],
+    "sizes": [
+      "5ml",
+      "10ml",
+      "30ml"
+    ],
     "prices": {
       "5ml": 200,
       "10ml": 290,
-      "30ml": 700,
-      "50ml": 1090,
-      "100ml": 1990
+      "30ml": 700
     },
-    "image": "https://placehold.co/400x400?text=Dunhill+Desire"
+    "image": "assets/perfumes/30ml-perfume.heic",
+    "images": {
+      "5ml": "assets/perfumes/5ml-perfume.png",
+      "10ml": "assets/perfumes/10ml-perfume.png",
+      "30ml": "assets/perfumes/30ml-perfume.png"
+    }
   },
   {
     "id": "p2",
     "name": "Cool Water",
     "type": "perfume",
     "description": "Premium perfume spray.",
-    "sizes": ["5ml", "10ml", "30ml", "50ml", "100ml"],
+    "sizes": [
+      "5ml",
+      "10ml",
+      "30ml"
+    ],
     "prices": {
       "5ml": 200,
       "10ml": 290,
-      "30ml": 700,
-      "50ml": 1090,
-      "100ml": 1990
+      "30ml": 700
     },
-    "image": "https://placehold.co/400x400?text=Cool+Water"
+    "image": "assets/perfumes/30ml-perfume.heic",
+    "images": {
+      "5ml": "assets/perfumes/5ml-perfume.png",
+      "10ml": "assets/perfumes/10ml-perfume.png",
+      "30ml": "assets/perfumes/30ml-perfume.png"
+    }
   },
   {
     "id": "p3",
     "name": "DNG Light Blue",
     "type": "perfume",
     "description": "Premium perfume spray.",
-    "sizes": ["5ml", "10ml", "30ml", "50ml", "100ml"],
+    "sizes": [
+      "5ml",
+      "10ml",
+      "30ml"
+    ],
     "prices": {
       "5ml": 200,
       "10ml": 290,
-      "30ml": 700,
-      "50ml": 1090,
-      "100ml": 1990
+      "30ml": 700
     },
-    "image": "https://placehold.co/400x400?text=DNG+Light+Blue"
+    "image": "assets/perfumes/30ml-perfume.heic",
+    "images": {
+      "5ml": "assets/perfumes/5ml-perfume.png",
+      "10ml": "assets/perfumes/10ml-perfume.png",
+      "30ml": "assets/perfumes/30ml-perfume.png"
+    }
   },
   {
     "id": "p4",
     "name": "Versace Eros",
     "type": "perfume",
     "description": "Premium perfume spray.",
-    "sizes": ["5ml", "10ml", "30ml", "50ml", "100ml"],
+    "sizes": [
+      "5ml",
+      "10ml",
+      "30ml"
+    ],
     "prices": {
       "5ml": 200,
       "10ml": 290,
-      "30ml": 700,
-      "50ml": 1090,
-      "100ml": 1990
+      "30ml": 700
     },
-    "image": "https://placehold.co/400x400?text=Versace+Eros"
+    "image": "assets/perfumes/30ml-perfume.heic",
+    "images": {
+      "5ml": "assets/perfumes/5ml-perfume.png",
+      "10ml": "assets/perfumes/10ml-perfume.png",
+      "30ml": "assets/perfumes/30ml-perfume.png"
+    }
   },
   {
     "id": "p5",
     "name": "Dior Sauvage",
     "type": "perfume",
     "description": "Premium perfume spray.",
-    "sizes": ["5ml", "10ml", "30ml", "50ml", "100ml"],
+    "sizes": [
+      "5ml",
+      "10ml",
+      "30ml"
+    ],
     "prices": {
       "5ml": 200,
       "10ml": 350,
-      "30ml": 850,
-      "50ml": 1250,
-      "100ml": 2390
+      "30ml": 850
     },
-    "image": "https://placehold.co/400x400?text=Dior+Sauvage"
+    "image": "assets/perfumes/30ml-perfume.heic",
+    "images": {
+      "5ml": "assets/perfumes/5ml-perfume.png",
+      "10ml": "assets/perfumes/10ml-perfume.png",
+      "30ml": "assets/perfumes/30ml-perfume.png"
+    }
   },
   {
     "id": "p6",
     "name": "Good Girl",
     "type": "perfume",
     "description": "Premium perfume spray.",
-    "sizes": ["5ml", "10ml", "30ml", "50ml", "100ml"],
+    "sizes": [
+      "5ml",
+      "10ml",
+      "30ml"
+    ],
     "prices": {
       "5ml": 200,
       "10ml": 350,
-      "30ml": 850,
-      "50ml": 1250,
-      "100ml": 2390
+      "30ml": 850
     },
-    "image": "https://placehold.co/400x400?text=Good+Girl"
+    "image": "assets/perfumes/30ml-perfume.heic",
+    "images": {
+      "5ml": "assets/perfumes/5ml-perfume.png",
+      "10ml": "assets/perfumes/10ml-perfume.png",
+      "30ml": "assets/perfumes/30ml-perfume.png"
+    }
   },
   {
     "id": "p7",
     "name": "Safari",
     "type": "perfume",
     "description": "Premium perfume spray.",
-    "sizes": ["5ml", "10ml", "30ml", "50ml", "100ml"],
+    "sizes": [
+      "5ml",
+      "10ml",
+      "30ml"
+    ],
     "prices": {
       "5ml": 200,
       "10ml": 350,
-      "30ml": 850,
-      "50ml": 1250,
-      "100ml": 2390
+      "30ml": 850
     },
-    "image": "https://placehold.co/400x400?text=Safari"
+    "image": "assets/perfumes/30ml-perfume.heic",
+    "images": {
+      "5ml": "assets/perfumes/5ml-perfume.png",
+      "10ml": "assets/perfumes/10ml-perfume.png",
+      "30ml": "assets/perfumes/30ml-perfume.png"
+    }
   },
   {
     "id": "p8",
     "name": "Blue De Chanel",
     "type": "perfume",
     "description": "Premium perfume spray.",
-    "sizes": ["5ml", "10ml", "30ml", "50ml", "100ml"],
+    "sizes": [
+      "5ml",
+      "10ml",
+      "30ml"
+    ],
     "prices": {
       "5ml": 250,
       "10ml": 390,
-      "30ml": 850,
-      "50ml": 1250,
-      "100ml": 2390
+      "30ml": 850
     },
-    "image": "https://placehold.co/400x400?text=Blue+De+Chanel"
+    "image": "assets/perfumes/30ml-perfume.heic",
+    "images": {
+      "5ml": "assets/perfumes/5ml-perfume.png",
+      "10ml": "assets/perfumes/10ml-perfume.png",
+      "30ml": "assets/perfumes/30ml-perfume.png"
+    }
   },
   {
     "id": "p9",
     "name": "Vampire Blood",
     "type": "perfume",
     "description": "Premium perfume spray.",
-    "sizes": ["5ml", "10ml", "30ml", "50ml", "100ml"],
+    "sizes": [
+      "5ml",
+      "10ml",
+      "30ml"
+    ],
     "prices": {
       "5ml": 250,
       "10ml": 390,
-      "30ml": 850,
-      "50ml": 1250,
-      "100ml": 2390
+      "30ml": 850
     },
-    "image": "https://placehold.co/400x400?text=Vampire+Blood"
+    "image": "assets/perfumes/30ml-perfume.heic",
+    "images": {
+      "5ml": "assets/perfumes/5ml-perfume.png",
+      "10ml": "assets/perfumes/10ml-perfume.png",
+      "30ml": "assets/perfumes/30ml-perfume.png"
+    }
   },
   {
     "id": "p10",
     "name": "Lemon",
     "type": "perfume",
     "description": "Premium perfume spray.",
-    "sizes": ["5ml", "10ml", "30ml", "50ml", "100ml"],
+    "sizes": [
+      "5ml",
+      "10ml",
+      "30ml"
+    ],
     "prices": {
       "5ml": 200,
       "10ml": 290,
-      "30ml": 700,
-      "50ml": 1000,
-      "100ml": 1800
+      "30ml": 700
     },
-    "image": "https://placehold.co/400x400?text=Lemon"
+    "image": "assets/perfumes/30ml-perfume.heic",
+    "images": {
+      "5ml": "assets/perfumes/5ml-perfume.png",
+      "10ml": "assets/perfumes/10ml-perfume.png",
+      "30ml": "assets/perfumes/30ml-perfume.png"
+    }
   },
   {
     "id": "p11",
     "name": "Rojonigondha",
     "type": "perfume",
     "description": "Premium perfume spray.",
-    "sizes": ["5ml", "10ml", "30ml", "50ml", "100ml"],
+    "sizes": [
+      "5ml",
+      "10ml",
+      "30ml"
+    ],
     "prices": {
       "5ml": 200,
       "10ml": 290,
-      "30ml": 700,
-      "50ml": 1000,
-      "100ml": 1800
+      "30ml": 700
     },
-    "image": "https://placehold.co/400x400?text=Rojonigondha"
+    "image": "assets/perfumes/30ml-perfume.heic",
+    "images": {
+      "5ml": "assets/perfumes/5ml-perfume.png",
+      "10ml": "assets/perfumes/10ml-perfume.png",
+      "30ml": "assets/perfumes/30ml-perfume.png"
+    }
   },
   {
     "id": "p12",
     "name": "Signature",
     "type": "perfume",
     "description": "Premium perfume spray.",
-    "sizes": ["5ml", "10ml", "30ml", "50ml", "100ml"],
+    "sizes": [
+      "5ml",
+      "10ml",
+      "30ml"
+    ],
     "prices": {
       "5ml": 200,
       "10ml": 290,
-      "30ml": 700,
-      "50ml": 1090,
-      "100ml": 1990
+      "30ml": 700
     },
-    "image": "https://placehold.co/400x400?text=Signature"
+    "image": "assets/perfumes/30ml-perfume.heic",
+    "images": {
+      "5ml": "assets/perfumes/5ml-perfume.png",
+      "10ml": "assets/perfumes/10ml-perfume.png",
+      "30ml": "assets/perfumes/30ml-perfume.png"
+    }
   },
   {
     "id": "p13",
     "name": "Scandal",
     "type": "perfume",
     "description": "Premium perfume spray.",
-    "sizes": ["5ml", "10ml", "30ml", "50ml", "100ml"],
+    "sizes": [
+      "5ml",
+      "10ml",
+      "30ml"
+    ],
     "prices": {
       "5ml": 200,
       "10ml": 290,
-      "30ml": 700,
-      "50ml": 1090,
-      "100ml": 1990
+      "30ml": 700
     },
-    "image": "https://placehold.co/400x400?text=Scandal"
+    "image": "assets/perfumes/30ml-perfume.heic",
+    "images": {
+      "5ml": "assets/perfumes/5ml-perfume.png",
+      "10ml": "assets/perfumes/10ml-perfume.png",
+      "30ml": "assets/perfumes/30ml-perfume.png"
+    }
   },
   {
     "id": "p14",
     "name": "Creed Aventus",
     "type": "perfume",
     "description": "Premium perfume spray.",
-    "sizes": ["5ml", "10ml", "30ml", "50ml", "100ml"],
+    "sizes": [
+      "5ml",
+      "10ml",
+      "30ml"
+    ],
     "prices": {
       "5ml": 250,
       "10ml": 390,
-      "30ml": 850,
-      "50ml": 1250,
-      "100ml": 2390
+      "30ml": 850
     },
-    "image": "https://placehold.co/400x400?text=Creed+Aventus"
+    "image": "assets/perfumes/30ml-perfume.heic",
+    "images": {
+      "5ml": "assets/perfumes/5ml-perfume.png",
+      "10ml": "assets/perfumes/10ml-perfume.png",
+      "30ml": "assets/perfumes/30ml-perfume.png"
+    }
   },
   {
     "id": "p15",
     "name": "Paris Hilton",
     "type": "perfume",
     "description": "Premium perfume spray.",
-    "sizes": ["5ml", "10ml", "30ml", "50ml", "100ml"],
+    "sizes": [
+      "5ml",
+      "10ml",
+      "30ml"
+    ],
     "prices": {
       "5ml": 200,
       "10ml": 350,
-      "30ml": 850,
-      "50ml": 1250,
-      "100ml": 2390
+      "30ml": 850
     },
-    "image": "https://placehold.co/400x400?text=Paris+Hilton"
+    "image": "assets/perfumes/30ml-perfume.heic",
+    "images": {
+      "5ml": "assets/perfumes/5ml-perfume.png",
+      "10ml": "assets/perfumes/10ml-perfume.png",
+      "30ml": "assets/perfumes/30ml-perfume.png"
+    }
   },
   {
     "id": "p16",
     "name": "Hawas Ice",
     "type": "perfume",
     "description": "Premium perfume spray.",
-    "sizes": ["5ml", "10ml", "30ml", "50ml", "100ml"],
+    "sizes": [
+      "5ml",
+      "10ml",
+      "30ml"
+    ],
     "prices": {
       "5ml": 250,
       "10ml": 390,
-      "30ml": 850,
-      "50ml": 1250,
-      "100ml": 2390
+      "30ml": 850
     },
-    "image": "https://placehold.co/400x400?text=Hawas+Ice"
+    "image": "assets/perfumes/30ml-perfume.heic",
+    "images": {
+      "5ml": "assets/perfumes/5ml-perfume.png",
+      "10ml": "assets/perfumes/10ml-perfume.png",
+      "30ml": "assets/perfumes/30ml-perfume.png"
+    }
   },
   {
     "id": "p17",
     "name": "Hawas Fire",
     "type": "perfume",
     "description": "Premium perfume spray.",
-    "sizes": ["5ml", "10ml", "30ml", "50ml", "100ml"],
+    "sizes": [
+      "5ml",
+      "10ml",
+      "30ml"
+    ],
     "prices": {
       "5ml": 250,
       "10ml": 390,
-      "30ml": 850,
-      "50ml": 1250,
-      "100ml": 2390
+      "30ml": 850
     },
-    "image": "https://placehold.co/400x400?text=Hawas+Fire"
+    "image": "assets/perfumes/30ml-perfume.heic",
+    "images": {
+      "5ml": "assets/perfumes/5ml-perfume.png",
+      "10ml": "assets/perfumes/10ml-perfume.png",
+      "30ml": "assets/perfumes/30ml-perfume.png"
+    }
   },
   {
     "id": "p18",
     "name": "Spice Bomb",
     "type": "perfume",
     "description": "Premium perfume spray.",
-    "sizes": ["5ml", "10ml", "30ml", "50ml", "100ml"],
+    "sizes": [
+      "5ml",
+      "10ml",
+      "30ml"
+    ],
     "prices": {
       "5ml": 250,
       "10ml": 390,
-      "30ml": 850,
-      "50ml": 1250,
-      "100ml": 2390
+      "30ml": 850
     },
-    "image": "https://placehold.co/400x400?text=Spice+Bomb"
+    "image": "assets/perfumes/30ml-perfume.heic",
+    "images": {
+      "5ml": "assets/perfumes/5ml-perfume.png",
+      "10ml": "assets/perfumes/10ml-perfume.png",
+      "30ml": "assets/perfumes/30ml-perfume.png"
+    }
   },
   {
     "id": "p19",
     "name": "Acqua Di Gio",
     "type": "perfume",
     "description": "Premium perfume spray.",
-    "sizes": ["5ml", "10ml", "30ml", "50ml", "100ml"],
+    "sizes": [
+      "5ml",
+      "10ml",
+      "30ml"
+    ],
     "prices": {
       "5ml": 290,
       "10ml": 500,
-      "30ml": 1090,
-      "50ml": 1550,
-      "100ml": 3050
+      "30ml": 1090
     },
-    "image": "https://placehold.co/400x400?text=Acqua+Di+Gio"
+    "image": "assets/perfumes/30ml-perfume.heic",
+    "images": {
+      "5ml": "assets/perfumes/5ml-perfume.png",
+      "10ml": "assets/perfumes/10ml-perfume.png",
+      "30ml": "assets/perfumes/30ml-perfume.png"
+    }
   },
   {
     "id": "p20",
     "name": "Hawas Cobra",
     "type": "perfume",
     "description": "Premium perfume spray.",
-    "sizes": ["5ml", "10ml", "30ml", "50ml", "100ml"],
+    "sizes": [
+      "5ml",
+      "10ml",
+      "30ml"
+    ],
     "prices": {
       "5ml": 250,
       "10ml": 390,
-      "30ml": 850,
-      "50ml": 1250,
-      "100ml": 2390
+      "30ml": 850
     },
-    "image": "https://placehold.co/400x400?text=Hawas+Cobra"
+    "image": "assets/perfumes/30ml-perfume.heic",
+    "images": {
+      "5ml": "assets/perfumes/5ml-perfume.png",
+      "10ml": "assets/perfumes/10ml-perfume.png",
+      "30ml": "assets/perfumes/30ml-perfume.png"
+    }
   },
   {
     "id": "p21",
     "name": "Lavender Oud",
     "type": "perfume",
     "description": "Premium perfume spray.",
-    "sizes": ["5ml", "10ml", "30ml", "50ml", "100ml"],
+    "sizes": [
+      "5ml",
+      "10ml",
+      "30ml"
+    ],
     "prices": {
       "5ml": 250,
       "10ml": 390,
-      "30ml": 850,
-      "50ml": 1250,
-      "100ml": 2390
+      "30ml": 850
     },
-    "image": "https://placehold.co/400x400?text=Lavender+Oud"
+    "image": "assets/perfumes/30ml-perfume.heic",
+    "images": {
+      "5ml": "assets/perfumes/5ml-perfume.png",
+      "10ml": "assets/perfumes/10ml-perfume.png",
+      "30ml": "assets/perfumes/30ml-perfume.png"
+    }
   },
   {
     "id": "p22",
     "name": "Balmain Paris",
     "type": "perfume",
     "description": "Premium perfume spray.",
-    "sizes": ["5ml", "10ml", "30ml", "50ml", "100ml"],
+    "sizes": [
+      "5ml",
+      "10ml",
+      "30ml"
+    ],
     "prices": {
       "5ml": 250,
       "10ml": 390,
-      "30ml": 850,
-      "50ml": 1250,
-      "100ml": 2390
+      "30ml": 850
     },
-    "image": "https://placehold.co/400x400?text=Balmain+Paris"
+    "image": "assets/perfumes/30ml-perfume.heic",
+    "images": {
+      "5ml": "assets/perfumes/5ml-perfume.png",
+      "10ml": "assets/perfumes/10ml-perfume.png",
+      "30ml": "assets/perfumes/30ml-perfume.png"
+    }
   },
   {
     "id": "p23",
     "name": "Suhrah",
     "type": "perfume",
     "description": "Premium perfume spray.",
-    "sizes": ["5ml", "10ml", "30ml", "50ml", "100ml"],
+    "sizes": [
+      "5ml",
+      "10ml",
+      "30ml"
+    ],
     "prices": {
       "5ml": 250,
       "10ml": 390,
-      "30ml": 850,
-      "50ml": 1250,
-      "100ml": 2390
+      "30ml": 850
     },
-    "image": "https://placehold.co/400x400?text=Suhrah"
+    "image": "assets/perfumes/30ml-perfume.heic",
+    "images": {
+      "5ml": "assets/perfumes/5ml-perfume.png",
+      "10ml": "assets/perfumes/10ml-perfume.png",
+      "30ml": "assets/perfumes/30ml-perfume.png"
+    }
   }
 ]
